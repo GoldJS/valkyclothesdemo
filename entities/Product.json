@@ -1,0 +1,96 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Short poetic subtitle"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "hoodies",
+        "tees",
+        "bottoms",
+        "outerwear",
+        "footwear",
+        "accessories"
+      ],
+      "description": "Product category"
+    },
+    "collection": {
+      "type": "string",
+      "description": "Collection name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Poetic product description"
+    },
+    "fabric_specs": {
+      "type": "string",
+      "description": "Technical fabric specifications"
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available sizes"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Primary product image"
+    },
+    "hover_image_url": {
+      "type": "string",
+      "description": "Hover/alternate product image"
+    },
+    "gallery_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Gallery images for product detail"
+    },
+    "edition_label": {
+      "type": "string",
+      "description": "Scarcity label e.g. EDITION 01/100"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Featured in current drop"
+    },
+    "is_best_seller": {
+      "type": "boolean",
+      "default": false,
+      "description": "Best seller flag"
+    },
+    "is_new": {
+      "type": "boolean",
+      "default": false,
+      "description": "New arrival flag"
+    },
+    "stock_count": {
+      "type": "number",
+      "description": "Remaining stock"
+    },
+    "material_note": {
+      "type": "string",
+      "description": "Brief material note for card display"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}
